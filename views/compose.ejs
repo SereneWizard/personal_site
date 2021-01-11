@@ -1,0 +1,32 @@
+<%- include("partials/header") -%>
+<%- include("partials/navbar") -%>
+
+<div class="container-fluid pt-3">
+    <div class="row align-items-center">
+        <div class="col col-lg-1">         
+        </div>
+        <div class="col col-lg-6">
+            <h1>Compose</h1>
+            <form action="/compose" method="post">
+                <div class="form-group">
+                  <label for="blogTitle">Title</label>
+                  <input type="text" class="form-control" name="blogTitle" id="blogTitle" aria-describedby="helpId" placeholder="Enter blog title">
+                  <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                  <label for="blogFile">Blog File Name</label>
+                  <input type="text" name="blogFile" id="blogFile" class="form-control" placeholder="" aria-describedby="helpId">
+                  <small id="helpId" class="text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                  <label for="blogContent">Content</label>
+                  <textarea class="form-control" name="blogContent" id="blogContent" rows="3"></textarea>
+                </div>
+                <br>
+                <button class="btn btn-primary" type="submit">Publish</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer") -%>
